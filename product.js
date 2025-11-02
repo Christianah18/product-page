@@ -47,10 +47,8 @@ const productPage = [
 let productPages = document.getElementById('productPage');
 
 productPages.innerHTML = productPage.map( (value ) => {
-    const message = "Hello i want to purchase this item ${value.name} for ${value.price}";
-    const link = `https://wa.me/2347026055882?text=${encodeURIComponent(
-        message
-    )}`;
+    const message = `Hello, I want to purchase this item: {value.name} for ₦value.price`;
+    const link = `https://wa.me/2347026055882?text=${encodeURIComponent( message)}`;
 
 
     return `
