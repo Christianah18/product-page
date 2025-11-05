@@ -17,68 +17,77 @@
     }
 
     .eachItem {
-        width: 298px;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 24px;
+        width: 30%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
         padding: 25px;
-        border-radius: 15px;
         font-weight: 500;
         font-weight: bolder;
         margin-bottom: 30px;
+        display: grid;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .eachItem img {
-        width: 80px;
-        height: 80px;
+        width: 100%;
+        height: 80%;
         display: block;
         margin: auto;
+        border-radius: 5px;
+
         cursor: pointer;
     }
- 
+
+    .eachItem img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 5px 17px rgba(0, 0, 0, 0.3);
+    }
+
     .itemName {
         text-align: center;
         font-weight: bold;
         background-color: rgb(255, 252, 252);
-        
+
     }
 
     .underline-price {
         text-decoration: line-through;
     }
 
-    #buttonClick{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px  25px;
-    font-weight: 100px;
-    flex: 1;
-    border-radius: 10px;
-    gap: 10px;
-    border: none;
-    background-color: orange;
-    color: black;
-    cursor: pointer;
-}
-
-#buttonClick :hover{
-    background-color: rgb(176, 121, 19);
-}
-
-@media screen and (max-width: 768px){
-    #productPage{
-        max-width: 100%;
+    #buttonClick {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 25px;
+        font-weight: 100px;
+        flex: 1;
+        border-radius: 10px;
+        gap: 10px;
+        border: none;
+        background-color: orange;
+        color: black;
+        cursor: pointer;
     }
-}
 
+    #buttonClick:hover {
+        background-color: rgb(176, 121, 19);
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .eachItem {
+            width: 100%;
+        }
+    }
 </style>
 </head>
 
-<body class="bg-gray-200 p-6 min--h-screen flex flex-cols-2">
+<body class="bg-gray-100 p-6 min-h-screen flex">
 
     <div class="max-w-7xl mx-auto bg-white">
         <h1 class="text-center text-black text-3xl mb-7 font-bolder">Product Page</h1>
 
-        <div id="productPage" class="grid grid-cols-2 gap-16 sm:grid-cols-2 md:grid-cols-3"></div>
+        <div id="productPage" class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+        
 
     </div>
 
@@ -86,4 +95,3 @@
 </body>
 
 </html>
-
